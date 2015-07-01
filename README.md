@@ -1,2 +1,0 @@
-# BFExchangeAGram
-self education
