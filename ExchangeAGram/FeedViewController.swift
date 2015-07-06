@@ -30,7 +30,9 @@ class FeedViewController: UIViewController,UICollectionViewDataSource, UICollect
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
+        
     }
     
     @IBAction func snapBarButtonItemTapped(sender: UIBarButtonItem) {
@@ -71,17 +73,20 @@ class FeedViewController: UIViewController,UICollectionViewDataSource, UICollect
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let imageData = UIImageJPEGRepresentation(image, 1.0)
         
+        let thumbNailData = UIImageJPEGRepresentation(image, 0.1)
+        
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("FeedItem", inManagedObjectContext: managedObjectContext!)
         let feedItem = FeedItem(entity:entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
         
         feedItem.image = imageData
         feedItem.caption = "test Caption"
+        feedItem.thumbNail = thumbNailData
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         feedArray.append(feedItem)
         self.collectionView.reloadData()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     
@@ -111,7 +116,7 @@ class FeedViewController: UIViewController,UICollectionViewDataSource, UICollect
         var filterVC = FilterViewController()
         filterVC.thisFeedItem = thisItem
         
-        self.navigationController?.pushViewController(filterVC, animated: false)
+        self.navigationController?.pushViewController(filterVC, animated: true)
         
         
         

@@ -14,9 +14,9 @@
 		663AEBCF1B43FA9100FB7FBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663AEBCD1B43FA9100FB7FBC /* LaunchScreen.xib */; };
 		663AEBDB1B43FA9100FB7FBC /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663AEBDA1B43FA9100FB7FBC /* ExchangeAGramTests.swift */; };
 		663AEBE51B43FC6400FB7FBC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663AEBE41B43FC6400FB7FBC /* FeedViewController.swift */; };
+		663C67D01B4A9EA6002B97E6 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C67CF1B4A9EA6002B97E6 /* FeedItem.swift */; };
 		668B8C791B440822005D50CB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B8C781B440822005D50CB /* FeedCell.swift */; };
 		668B8C7B1B4409FD005D50CB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668B8C7A1B4409FD005D50CB /* MobileCoreServices.framework */; };
-		669F00BD1B4550860066F411 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F00BC1B4550860066F411 /* FeedItem.swift */; };
 		669F00BF1B455F660066F411 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F00BE1B455F660066F411 /* FilterViewController.swift */; };
 		669F00C11B4569850066F411 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F00C01B4569850066F411 /* FilterCell.swift */; };
 /* End PBXBuildFile section */
@@ -43,9 +43,9 @@
 		663AEBD91B43FA9100FB7FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		663AEBDA1B43FA9100FB7FBC /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		663AEBE41B43FC6400FB7FBC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		663C67CF1B4A9EA6002B97E6 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		668B8C781B440822005D50CB /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		668B8C7A1B4409FD005D50CB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		669F00BC1B4550860066F411 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 		669F00BE1B455F660066F411 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		669F00C01B4569850066F411 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,11 +95,10 @@
 				669F00BE1B455F660066F411 /* FilterViewController.swift */,
 				668B8C781B440822005D50CB /* FeedCell.swift */,
 				669F00C01B4569850066F411 /* FilterCell.swift */,
-				669F00BC1B4550860066F411 /* FeedItem.swift */,
 				663AEBC81B43FA9100FB7FBC /* Main.storyboard */,
 				663AEBCB1B43FA9100FB7FBC /* Images.xcassets */,
 				663AEBCD1B43FA9100FB7FBC /* LaunchScreen.xib */,
-				663AEBC31B43FA9100FB7FBC /* ExchangeAGram.xcdatamodeld */,
+				663C67D11B4A9EB7002B97E6 /* Model */,
 				663AEBBF1B43FA9100FB7FBC /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -129,6 +128,16 @@
 				663AEBD91B43FA9100FB7FBC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		663C67D11B4A9EB7002B97E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				663AEBC31B43FA9100FB7FBC /* ExchangeAGram.xcdatamodeld */,
+				663C67CF1B4A9EA6002B97E6 /* FeedItem.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +245,7 @@
 				663AEBC21B43FA9100FB7FBC /* AppDelegate.swift in Sources */,
 				668B8C791B440822005D50CB /* FeedCell.swift in Sources */,
 				663AEBE51B43FC6400FB7FBC /* FeedViewController.swift in Sources */,
-				669F00BD1B4550860066F411 /* FeedItem.swift in Sources */,
+				663C67D01B4A9EA6002B97E6 /* FeedItem.swift in Sources */,
 				663AEBC51B43FA9100FB7FBC /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +470,8 @@
 				663AEBC41B43FA9100FB7FBC /* ExchangeAGram.xcdatamodel */,
 			);
 			currentVersion = 663AEBC41B43FA9100FB7FBC /* ExchangeAGram.xcdatamodel */;
-			path = ExchangeAGram.xcdatamodeld;
+			name = ExchangeAGram.xcdatamodeld;
+			path = ExchangeAGram/ExchangeAGram.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
