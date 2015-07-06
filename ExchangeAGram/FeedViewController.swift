@@ -86,7 +86,7 @@ class FeedViewController: UIViewController,UICollectionViewDataSource, UICollect
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         feedArray.append(feedItem)
         self.collectionView.reloadData()
-        //self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     
